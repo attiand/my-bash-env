@@ -1,8 +1,6 @@
-BASEDIR=$(cd $(dirname "$1") && pwd -P)/$(basename "$1")
+BASEDIR=$(dirname "$BASH_SOURCE")
 
 BASEDIR=${BASEDIR%/}
-
-BASEDIR=$BASEDIR/my-linux-env
 
 # home, work, remote
 MY_LINUX_ENV_TYPE=work

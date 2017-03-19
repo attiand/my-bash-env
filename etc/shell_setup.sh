@@ -1,6 +1,6 @@
 shopt -s globstar
 
-if [ $MY_LINUX_ENV_TYPE != "remote" ]
+if [ $MY_LINUX_ENV_TYPE != 'remote' ]
   then
     export PS1="\[\e]0;\$(__git_ps1 \"(%s) \")\w\a\];"
 fi
