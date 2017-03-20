@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/bash
 
 ROOT_DIR=~/nya
 COMMAND=eclipse/eclipse
@@ -6,7 +6,7 @@ COMMAND=eclipse/eclipse
 while getopts ":l" opt; do
   case $opt in
     l)
-      files=$(find $ROOT_DIR -type f -path *$COMMAND -maxdepth 3 -mindepth 2 | xargs )
+      files=$(find $ROOT_DIR -mindepth 2 -maxdepth 3 -type f -path *$COMMAND | xargs )
       output=${files//$ROOT_DIR\//}
       output=${output//\/$COMMAND/}
       echo $output
@@ -20,7 +20,7 @@ done
 
 if [ -n "$1" ]
   then
-    $ROOT_DIR/$1/$COMMAND
+    $ROOT_DIR/$1/$COMMAND > /dev/null 2>&1 &
   else
     echo No command specified >&2
     exit -1
