@@ -7,7 +7,7 @@ fi
 
 if [ $MY_LINUX_ENV_TYPE != 'remote' ]
   then
-    export PS1="\[\e]0;\$(__git_ps1 \"(%s) \")\w\a\];"
+    export PS1='$(__git_ps1 "\[\e[0;32m\](%s)\[\e[0m\]");'
 fi
 
 #export GIT_PS1_SHOWDIRTYSTATE=true
