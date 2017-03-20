@@ -3,7 +3,9 @@ BASEDIR=$(dirname "$BASH_SOURCE")
 BASEDIR=${BASEDIR%/}
 
 # home, work, remote
-MY_LINUX_ENV_TYPE=work
+if [ -z "${MY_LINUX_ENV_TYPE}" ]; then
+    MY_LINUX_ENV_TYPE='work'
+fi
 
 source $BASEDIR/etc/bash_completion.d/eclaunch
 source $BASEDIR/etc/common.sh
