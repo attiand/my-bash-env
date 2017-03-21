@@ -2,7 +2,11 @@ shopt -s globstar
 
 if [ $MY_LINUX_ENV_OS == 'LINUX' ]
   then
-    source /usr/lib/git-core/git-sh-prompt
+    if [ "$(. /etc/os-release; echo $NAME)" = "Ubuntu" ]; then
+      source /usr/lib/git-core/git-sh-prompt
+    else
+      source /usr/share/git-core/contrib/completion/git-prompt.sh
+    fi
 fi
 
 if [ $MY_LINUX_ENV_TYPE != 'remote' ]
