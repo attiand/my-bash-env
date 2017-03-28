@@ -3,11 +3,11 @@ command_exists(){
 }
 
 if [ "$(uname)" == "Darwin" ]; then
-  MY_LINUX_ENV_OS='MAC'
+  MY_BASH_ENV_OS='MAC'
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-  MY_LINUX_ENV_OS='LINUX'
+  MY_BASH_ENV_OS='LINUX'
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
-  MY_LINUX_ENV_OS='WIN'
+  MY_BASH_ENV_OS='WIN'
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
-  MY_LINUX_ENV_OS='WIN'
+  MY_BASH_ENV_OS='WIN'
 fi
