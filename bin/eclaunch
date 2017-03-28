@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-ROOT_DIR=~/nya
+ROOT_DIR=$MY_BASH_ENV_EC_ROOT
 COMMAND=eclipse/eclipse
 
 while getopts ":l" opt; do
