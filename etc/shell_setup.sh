@@ -9,6 +9,11 @@ if [ $MY_BASH_ENV_OS == 'LINUX' ]
     fi
 fi
 
+if [ $MY_BASH_ENV_OS == 'LINUX' ]
+  then
+    alias open='xdg-open &>/dev/null'
+fi
+
 if [ $MY_BASH_ENV_TYPE != 'remote' ]
   then
     export PS1='$(__git_ps1 "\[\e[0;32m\](%s)\[\e[0m\]");'
