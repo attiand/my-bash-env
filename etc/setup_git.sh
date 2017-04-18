@@ -10,6 +10,7 @@ cat <<EOF > $HOME/.gitconfig
 
 [alias]
   s = status
+  co = checkout
 	lg = log --all --graph --pretty='%h %C(cyan)%cd %C(auto)%d %C(bold yellow)%an%n%C(reset)%<(139,trunc)%s%n'
 
 [merge]
