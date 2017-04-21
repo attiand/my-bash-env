@@ -1,5 +1,7 @@
 shopt -s globstar
 
+alias xdiff="kdiff3"
+
 if [ $MY_BASH_ENV_OS == 'LINUX' ]
   then
     if [ "$(. /etc/os-release; echo $NAME)" = "Ubuntu" ]; then
@@ -18,9 +20,6 @@ if [ $MY_BASH_ENV_TYPE != 'remote' ]
   then
     export PS1='$(__git_ps1 "\[\e[0;32m\](%s)\[\e[0m\]");'
 fi
-
-#export GIT_PS1_SHOWDIRTYSTATE=true
-#export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 if(command_exists "emacs")
   then
