@@ -14,14 +14,12 @@ cat <<EOF > $HOME/.gitconfig
 	lg = log --all --graph --pretty='%h %C(cyan)%cd %C(auto)%d %C(bold yellow)%an%n%C(reset)%<(139,trunc)%s%n'
 
 [merge]
-    tool = kdiff3
-
-[mergetool "kdiff3"]
-    path = /usr/local/bin/kdiff3
+  tool = kdiff3
 
 [diff]
-    tool = kdiff3
+  tool = kdiff3
 
-[difftool "kdiff3"]
-    path = /usr/local/bin/kdiff3
+[difftool]
+  prompt = false
+
 EOF
