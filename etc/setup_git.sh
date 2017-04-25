@@ -8,9 +8,15 @@ cat <<EOF > $HOME/.gitconfig
 [push]
 	default = simple
 
+[color]
+  ui = true
+
 [alias]
   s = status
+  st = status --short
   co = checkout
+  br = branch
+  last = log -1 --stat
 	lg = log --all --graph --pretty='%h %C(cyan)%cd %C(auto)%d %C(bold yellow)%an%n%C(reset)%<(139,trunc)%s%n'
 
 [merge]
