@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+target_branch=$1
+((!$#)) && target_branch=$(git rev-parse --abbrev-ref HEAD)
+
+echo "Review for $target_branch"
+git push origin HEAD:refs/for/$target_branch

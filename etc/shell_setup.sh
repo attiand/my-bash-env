@@ -23,5 +23,6 @@ fi
 
 if(command_exists "emacs")
   then
-    export EDITOR='emacs -nw'
+      export EDITOR='emacs -nw'
+      alias emacs='emacs -nw'
 fi

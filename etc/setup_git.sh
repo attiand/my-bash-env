@@ -29,3 +29,8 @@ cat <<EOF > $HOME/.gitconfig
   prompt = false
 
 EOF
+
+# Git completion
+_git_review () {
+   __gitcomp_nl "$(__git_refs)"
+}
