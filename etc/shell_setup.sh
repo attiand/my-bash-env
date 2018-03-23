@@ -18,7 +18,9 @@ fi
 
 if [ $MY_BASH_ENV_TYPE != 'remote' ]
   then
-    export PS1='$(__git_ps1 "\[\e[0;32m\](%s)\[\e[0m\]");'
+    export PS1='$(__git_ps1 "\[\e[0;32m\](%s)\[\e[0m\]");'  
+  else
+    export PS1='\[\033[0;35m\]\h\[\e[0m\]$(__git_ps1 "\[\e[0;32m\](%s)\[\e[0m\]");'
 fi
 
 if(command_exists "emacs")
