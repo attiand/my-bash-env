@@ -14,3 +14,4 @@ source $BASEDIR/etc/setup_git.sh
 source $BASEDIR/../maven-bash-completion/bash_completion.bash
 
 export PATH=$BASEDIR/bin:$PATH
+export ACKRC=$BASEDIR/etc/ackrc
