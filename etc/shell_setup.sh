@@ -25,6 +25,6 @@ fi
 
 if(command_exists "emacs")
   then
-      export EDITOR='emacs -nw'
-      alias emacs='emacs -nw'
+      export EDITOR='emacs -nw --load ~/git/my-bash-env/etc/emacs.d/init.el'
+      alias emacs='emacs -nw --load ~/git/my-bash-env/etc/emacs.d/init.el'
 fi
