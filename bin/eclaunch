@@ -18,9 +18,11 @@ while getopts ":l" opt; do
   esac
 done
 
-if [ -n "$1" ]
+if [ $# -ne 0 ]
   then
-    export GDK_BACKEND=x11; $ROOT_DIR/$1/$COMMAND > /dev/null 2>&1 &
+    INSTALLATION=$1
+    shift
+    export GDK_BACKEND=x11; LC_ALL=sv_SE; $ROOT_DIR/$INSTALLATION/$COMMAND "$@" > /dev/null 2>&1 &
   else
     echo No command specified >&2
     exit -1

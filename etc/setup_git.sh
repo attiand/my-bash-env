@@ -6,7 +6,7 @@ cat <<EOF > $HOME/.gitconfig
   email = $MY_BASH_ENV_EMAIL
 
 [push]
-	default = simple
+  default = simple
 
 [color]
   ui = true
@@ -17,7 +17,7 @@ cat <<EOF > $HOME/.gitconfig
   co = checkout
   br = branch
   last = log -1 --stat
-	lg = log --all --graph --pretty='%h %C(cyan)%cd %C(auto)%d %C(bold yellow)%an%n%C(reset)%<(139,trunc)%s%n'
+  lg = log --all --graph --pretty='%h %C(cyan)%cd %C(auto)%d %C(bold yellow)%an%n%C(reset)%<(139,trunc)%s%n'
 
 [merge]
   tool = kdiff3
@@ -27,6 +27,9 @@ cat <<EOF > $HOME/.gitconfig
 
 [difftool]
   prompt = false
+
+[difftool "code"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 
 EOF
 
