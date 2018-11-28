@@ -1,3 +1,4 @@
 --ignore-dir=target
 --type-set=maven:is:pom.xml
 --type-set=jenkins:is:Jenkinsfile,job_dsl.groovy
+--type-set=gradle:is:build.gradle,settings.gradle

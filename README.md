@@ -1,6 +1,7 @@
 # Install
 ```bash
 git clone git@github.com:attiand/my-bash-env.git
+git clone git@github.com:gradle/gradle-completion.git
 git clone https://github.com/juven/maven-bash-completion.git
 ```
 
