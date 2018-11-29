@@ -23,13 +23,13 @@ cat <<EOF > $HOME/.gitconfig
   tool = kdiff3
 
 [diff]
-  tool = kdiff3
+  tool = code
 
 [difftool]
   prompt = false
 
 [difftool "code"]
-  cmd = code --wait --diff $LOCAL $REMOTE
+  cmd = code --wait --diff \$LOCAL \$REMOTE
 
 EOF
 
