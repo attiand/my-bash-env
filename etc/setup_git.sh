@@ -19,6 +19,9 @@ cat <<EOF > $HOME/.gitconfig
   last = log -1 --stat
   lg = log --all --graph --pretty='%h %C(cyan)%cd %C(auto)%d %C(bold yellow)%an%n%C(reset)%<(139,trunc)%s%n'
 
+[log]
+  date = format:'%Y-%m-%d %H:%M'
+
 [merge]
   tool = kdiff3
 
