@@ -1,6 +1,7 @@
 shopt -s globstar
 
-alias xdiff="kdiff3"
+#alias xdiff="kdiff3"
+alias xdiff="code --diff"
 alias remote="gnome-terminal --tab-with-profile=remote --"
 
 if [ $MY_BASH_ENV_OS == 'LINUX' ]
