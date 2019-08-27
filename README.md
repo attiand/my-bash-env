@@ -22,3 +22,4 @@ source ~/git/my-bash-env/setup.sh
 
 # Commands
 * eclaunch
+* nyaenv
