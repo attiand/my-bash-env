@@ -21,7 +21,7 @@ if [ $# -ne 0 ]
   then
     INSTALLATION=$1
     shift
-    bash -c "source $ROOT_DIR/$INSTALLATION/setup.source; bash"
+    bash -c "source $ROOT_DIR/$INSTALLATION/setup.source; export NYAENV=$INSTALLATION ; bash"
   else
     echo No command specified >&2
     exit -1
