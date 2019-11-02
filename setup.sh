@@ -18,3 +18,4 @@ source $BASEDIR/../gradle-completion/gradle-completion.bash
 export PATH=$BASEDIR/bin:$PATH
 #export HTOPRC=$BASEDIR/etc/htoprc
 export ACKRC=$BASEDIR/etc/ackrc
+export BAT_CONFIG_PATH=$BASEDIR/etc/batrc

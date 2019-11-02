@@ -15,6 +15,11 @@ MY_BASH_ENV_EMAIL='My email'
 export MY_BASH_ENV_EC_ROOT=~/nya
 source ~/git/my-bash-env/setup.sh
 ```
+
+### 3PP
+* [ack](https://beyondgrep.com)
+* [bat](https://github.com/sharkdp/bat)
+
 ## Configure
 * Bash prompt
 * Git
