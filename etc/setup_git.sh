@@ -24,6 +24,7 @@ cat <<EOF > $HOME/.gitconfig
 
 [merge]
   tool = kdiff3
+  conflictstyle = diff3
 
 [diff]
   tool = code
@@ -33,6 +34,9 @@ cat <<EOF > $HOME/.gitconfig
 
 [difftool "code"]
   cmd = code --wait --diff \$LOCAL \$REMOTE
+
+[mergetool "meld"]
+  cmd = meld \$LOCAL \$BASE \$REMOTE -o \$MERGED --diff \$BASE \$LOCAL --diff \$BASE \$REMOTE --auto-merge
 
 EOF
 
