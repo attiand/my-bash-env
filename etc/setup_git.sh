@@ -38,6 +38,9 @@ cat <<EOF > $HOME/.gitconfig
 [mergetool "meld"]
   cmd = meld \$LOCAL \$BASE \$REMOTE -o \$MERGED --diff \$BASE \$LOCAL --diff \$BASE \$REMOTE --auto-merge
 
+[mergetool "code"]
+    cmd = code --wait \$MERGED
+
 EOF
 
 # Git completion
