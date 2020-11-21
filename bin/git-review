@@ -1,7 +1,50 @@
 #!/bin/bash -e
 
-target_branch=$1
-((!$#)) && target_branch=$(git rev-parse --abbrev-ref HEAD)
 
-echo "Review for $target_branch"
-git push origin HEAD:refs/for/$target_branch
+usage() { 
+   echo "Push to gerrit"
+   echo
+   echo "Syntax: git review [OPTION] [BRANCH]"
+   echo 
+   echo "OPTION:"
+   echo "-o     Specify git push options"
+   echo "-h     Print this help"
+   echo
+   echo "BRANCH - The branch to push to, use current checked-out branch if not specified"
+   echo 
+   echo "Example:"
+   echo 
+   echo "git review -o topic=issue1 master"
+} 
+
+while getopts "o:h" OPTION; do
+    case $OPTION in
+    o)
+        PUSH_OPTION="-o $OPTARG"
+        ;;
+    ?)
+        usage
+        exit 0
+        ;;
+    h)
+        usage
+        exit 0
+        ;;
+    *)
+        echo "Incorrect options provided"
+        exit 1
+        ;;
+    esac
+done
+
+shift $((OPTIND-1))
+
+if [ -z $1 ]
+then
+  TARGET_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+else
+  TARGET_BRANCH=$1
+fi
+
+echo "Push review for $TARGET_BRANCH"
+git push origin $PUSH_OPTION HEAD:refs/for/$TARGET_BRANCH

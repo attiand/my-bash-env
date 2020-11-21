@@ -5,6 +5,9 @@ cat <<EOF > $HOME/.gitconfig
   name = $MY_BASH_ENV_NAME
   email = $MY_BASH_ENV_EMAIL
 
+[pull]
+	ff = only
+
 [push]
   default = simple
 
@@ -35,11 +38,14 @@ cat <<EOF > $HOME/.gitconfig
 [difftool "code"]
   cmd = code --wait --diff \$LOCAL \$REMOTE
 
-[mergetool "meld"]
-  cmd = meld \$LOCAL \$BASE \$REMOTE -o \$MERGED --diff \$BASE \$LOCAL --diff \$BASE \$REMOTE --auto-merge
-
 [mergetool "code"]
     cmd = code --wait \$MERGED
+
+[difftool "meld"]
+  cmd = meld \$LOCAL \$REMOTE
+
+[mergetool "meld"]
+  cmd = meld \$LOCAL \$BASE \$REMOTE -o \$MERGED --diff \$BASE \$LOCAL --diff \$BASE \$REMOTE --auto-merge
 
 EOF
 
