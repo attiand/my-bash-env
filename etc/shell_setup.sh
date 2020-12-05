@@ -1,7 +1,6 @@
 shopt -s globstar
 
-#alias xdiff="kdiff3"
-alias xdiff="code --diff"
+alias difftool="code --diff"
 alias remote="gnome-terminal --tab-with-profile=remote --"
 
 if [ $MY_BASH_ENV_OS == 'LINUX' ]
@@ -29,8 +28,5 @@ fi
 #Set Bash title
 export PROMPT_COMMAND='printf "\033]0;%s:%s:%s\007" "${USER}" "${NYAENV}" "${PWD/#$HOME/\~}"'
 
-if(command_exists "emacs")
-  then
-      export EDITOR='emacs -nw --load ~/git/my-bash-env/etc/emacs.d/init.el'
-      alias emacs='emacs -nw --load ~/git/my-bash-env/etc/emacs.d/init.el'
-fi
+export EDITOR=vim
+
