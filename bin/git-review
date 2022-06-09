@@ -12,15 +12,16 @@ usage() {
    echo
    echo "BRANCH - The branch to push to, use current checked-out branch if not specified"
    echo 
-   echo "Example:"
+   echo "Examples"
    echo 
    echo "git review -o topic=issue1 master"
+   echo "git review -o \"m=#AS\" -o \"l=Code-Review+2\""
 } 
 
 while getopts "o:h" OPTION; do
     case $OPTION in
     o)
-        PUSH_OPTION="-o $OPTARG"
+        PUSH_OPTION="$PUSH_OPTION -o $OPTARG"
         ;;
     ?)
         usage
