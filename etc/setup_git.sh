@@ -26,7 +26,7 @@ cat <<EOF > $HOME/.gitconfig
   date = format:'%Y-%m-%d %H:%M'
 
 [merge]
-  tool = kdiff3
+  tool = code
   conflictstyle = diff3
 
 [diff]
@@ -39,7 +39,8 @@ cat <<EOF > $HOME/.gitconfig
   cmd = code --wait --diff \$LOCAL \$REMOTE
 
 [mergetool "code"]
-    cmd = code --wait \$MERGED
+  cmd = code --wait --merge \$REMOTE \$LOCAL \$BASE \$MERGED
+
 
 [difftool "meld"]
   cmd = meld \$LOCAL \$REMOTE
