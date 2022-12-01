@@ -3,5 +3,6 @@
 --type-set=jenkins:is:Jenkinsfile,job_dsl.groovy
 --type-set=gradle:is:build.gradle,settings.gradle
 --type-set=docker:is:Dockerfile
+--type-set=fitnesse:is:content.txt
 --type-set=buildimages:is:common.groovy
 --type-set=jboss:is:jboss-deployment-structure.xml
