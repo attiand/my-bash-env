@@ -2,11 +2,11 @@
 
 
 usage() { 
-   echo "Push to gerrit"
+   echo "Push to Gerrit"
    echo
-   echo "Syntax: git review [OPTION] [BRANCH]"
+   echo "Syntax: git review [OPTIONS] [BRANCH]"
    echo 
-   echo "OPTION:"
+   echo "OPTIONS:"
    echo "-o     Specify git push options"
    echo "-h     Print this help"
    echo
@@ -14,7 +14,7 @@ usage() {
    echo 
    echo "Examples"
    echo 
-   echo "git review -o topic=issue1 master"
+   echo "git review -o topic=bugfix master"
    echo "git review -o \"m=#AS\" -o \"l=Code-Review+2\""
 } 
 

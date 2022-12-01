@@ -1,0 +1,38 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+format = """$kubernetes\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$character"""
+
+[character]
+success_symbol = "[✔ ](bold green)"
+error_symbol = "[✘ ](bold red)"
+format = "$symbol"
+
+[package]
+disabled = true
+
+[directory]
+disabled = true
+
+[git_commit]
+disabled = true
+
+[git_branch]
+symbol = ""
+style = "fg:246"
+format = '[$symbol$branch(:$remote_branch)]($style):'
+
+[git_status]
+style = "fg:190"
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[git_state]

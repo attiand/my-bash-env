@@ -5,6 +5,11 @@ git clone git@github.com:gradle/gradle-completion.git
 git clone https://github.com/juven/maven-bash-completion.git
 ```
 
+Optional
+```bash
+cargo install starship --locked
+```
+
 Add the following to `.bashrc`
 
 ```bash
@@ -27,4 +32,3 @@ source ~/git/my-bash-env/setup.sh
 
 # Commands
 * eclaunch
-* nyaenv
