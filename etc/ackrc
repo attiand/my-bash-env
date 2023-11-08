@@ -1,8 +1,11 @@
 --ignore-dir=target
 --type-set=maven:is:pom.xml
+--type-set=npm:is:package.json
+--type-set=property:ext:properties
 --type-set=jenkins:is:Jenkinsfile,job_dsl.groovy
 --type-set=gradle:is:build.gradle,settings.gradle
 --type-set=docker:is:Dockerfile
 --type-set=fitnesse:is:content.txt
 --type-set=buildimages:is:common.groovy
 --type-set=jboss:is:jboss-deployment-structure.xml
+#--type-set=javanotest:match:/(?<!Test)\.java/

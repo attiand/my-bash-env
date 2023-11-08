@@ -1,0 +1,45 @@
+#!/bin/bash -e
+
+
+usage() {
+   echo "Create local branch tracking remote, must be run from a branch tracking a remote branch"
+   echo
+   echo "Syntax: git create-branch <branchname>"
+   echo
+   echo "branchname - The name of the branch to create"
+   echo
+   echo "Example"
+   echo
+   echo "git create-branch bugfix"
+}
+
+while getopts "h" OPTION; do
+    case $OPTION in
+    ?)
+        usage
+        exit 0
+        ;;
+    h)
+        usage
+        exit 0
+        ;;
+    *)
+        echo "Incorrect options provided"
+        exit 1
+        ;;
+    esac
+done
+
+shift $((OPTIND-1))
+
+if [ -z "$1" ]; then
+    echo "Error: No branchname provided."
+    usage
+    exit 1
+fi
+
+TARGET_REMOTE=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null) || { echo "$(git rev-parse --abbrev-ref HEAD) is not on tracking a remote branch"; exit 1; }
+
+echo "Creating branch $1 tracking $TARGET_REMOTE"
+
+git checkout -b $1 $TARGET_REMOTE

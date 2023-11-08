@@ -1,22 +1,22 @@
 #!/bin/bash -e
 
 
-usage() { 
+usage() {
    echo "Push to Gerrit"
    echo
    echo "Syntax: git review [OPTIONS] [BRANCH]"
-   echo 
+   echo
    echo "OPTIONS:"
    echo "-o     Specify git push options"
    echo "-h     Print this help"
    echo
    echo "BRANCH - The branch to push to, use current checked-out branch if not specified"
-   echo 
+   echo
    echo "Examples"
-   echo 
+   echo
    echo "git review -o topic=bugfix master"
    echo "git review -o \"m=#AS\" -o \"l=Code-Review+2\""
-} 
+}
 
 while getopts "o:h" OPTION; do
     case $OPTION in
@@ -40,12 +40,15 @@ done
 
 shift $((OPTIND-1))
 
-if [ -z $1 ]
+if [ -z "$1" ]
 then
-  TARGET_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  UPSTREAM=$(git rev-parse --abbrev-ref --symbolic-full-name @{u}) || exit 1
+  TARGET_BRANCH=${UPSTREAM#*/}
+  REPOSITORY=${UPSTREAM%/*}
 else
   TARGET_BRANCH=$1
+  REPOSITORY="origin"
 fi
 
-echo "Push review for $TARGET_BRANCH"
-git push origin $PUSH_OPTION HEAD:refs/for/$TARGET_BRANCH
+echo "Push review for $REPOSITORY/$TARGET_BRANCH"
+git push $REPOSITORY $PUSH_OPTION HEAD:refs/for/$TARGET_BRANCH
