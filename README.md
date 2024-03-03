@@ -1,4 +1,6 @@
 # Install
+
+## Bash
 ```bash
 git clone git@github.com:attiand/my-bash-env.git
 git clone git@github.com:gradle/gradle-completion.git
@@ -20,18 +22,27 @@ Add the following to `.bashrc`
 MY_BASH_ENV_TYPE='work'
 MY_BASH_ENV_NAME='My Name'
 MY_BASH_ENV_EMAIL='My email'
-export MY_BASH_ENV_EC_ROOT=~/nya
-source ~/git/my-bash-env/setup.sh
+source ~/git/my-bash-env/setup_bash.sh
 ```
 
 ### 3PP
 * [ack](https://beyondgrep.com)
 * [bat](https://github.com/sharkdp/bat)
 
-## Configure
-* Bash prompt
+
+## Zsh
+
+Install ohmyzsh: https://ohmyz.sh/
+
+```bash
+MY_BASH_ENV_TYPE='work'
+MY_BASH_ENV_NAME='My Name'
+MY_BASH_ENV_EMAIL='My email'
+source ~/git/my-bash-env/setup_zsh.sh
+```
+
+# Configures
+* Prompt
 * Git
 * Maven completion
 
-# Commands
-* eclaunch
