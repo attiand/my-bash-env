@@ -17,7 +17,7 @@ ZSH_THEME="attiand"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -112,7 +112,6 @@ source $BASEDIR/etc/setup_git.sh
 export PATH=$BASEDIR/bin:$PATH
 export ACKRC=$BASEDIR/etc/ackrc
 export BAT_CONFIG_PATH=$BASEDIR/etc/batrc
-export STARSHIP_CONFIG=$BASEDIR/etc/starship.toml
 
 bindkey "\e[3B" dirhistory_zle_dirhistory_up
 bindkey "\e[1;3B" dirhistory_zle_dirhistory_up
