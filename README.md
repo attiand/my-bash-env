@@ -34,15 +34,13 @@ source ~/git/my-bash-env/setup_bash.sh
 
 Install ohmyzsh: https://ohmyz.sh/
 
+# directory for bash compatible completion
+mkdir ~/.bash_completion.d
+
 ```bash
 MY_BASH_ENV_TYPE='work'
 MY_BASH_ENV_NAME='My Name'
 MY_BASH_ENV_EMAIL='My email'
 source ~/git/my-bash-env/setup_zsh.sh
 ```
-
-# Configures
-* Prompt
-* Git
-* Maven completion
 

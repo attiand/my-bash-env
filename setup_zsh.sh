@@ -70,7 +70,7 @@ ZSH_CUSTOM=~/git/my-bash-env/ohmyzsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dirhistory)
+plugins=(git dirhistory kube-ps1)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,3 +118,9 @@ bindkey "\e[1;3B" dirhistory_zle_dirhistory_up
 
 bindkey "\e[3A" dirhistory_zle_dirhistory_down
 bindkey "\e[1;3A" dirhistory_zle_dirhistory_down
+
+for bcfile in ~/.bash_completion.d/* ; do
+    source $bcfile
+done
+
+
