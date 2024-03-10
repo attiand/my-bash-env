@@ -113,6 +113,12 @@ export PATH=$BASEDIR/bin:$PATH
 export ACKRC=$BASEDIR/etc/ackrc
 export BAT_CONFIG_PATH=$BASEDIR/etc/batrc
 
+PROMPT='$(kube_ps1)'$PROMPT
+export KUBE_PS1_SYMBOL_ENABLE=false
+export KUBE_PS1_PREFIX=[
+export KUBE_PS1_SUFFIX=]
+
+
 bindkey "\e[3B" dirhistory_zle_dirhistory_up
 bindkey "\e[1;3B" dirhistory_zle_dirhistory_up
 
