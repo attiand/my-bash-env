@@ -108,6 +108,7 @@ if [ -z "${MY_BASH_ENV_TYPE}" ]; then
 fi
 
 source $BASEDIR/etc/setup_git.sh
+source $BASEDIR/etc/zsh/shell_setup.sh
 
 export PATH=$BASEDIR/bin:$PATH
 export ACKRC=$BASEDIR/etc/ackrc

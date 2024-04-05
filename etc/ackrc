@@ -1,4 +1,5 @@
 --ignore-dir=target
+--type-set=gradle:is:build.gradle
 --type-set=maven:is:pom.xml
 --type-set=npm:is:package.json
 --type-set=property:ext:properties
@@ -8,4 +9,5 @@
 --type-set=fitnesse:is:content.txt
 --type-set=buildimages:is:common.groovy
 --type-set=jboss:is:jboss-deployment-structure.xml
+--type-set=renovate:is:renovate.json
 #--type-set=javanotest:match:/(?<!Test)\.java/

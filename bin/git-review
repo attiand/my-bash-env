@@ -15,7 +15,7 @@ usage() {
    echo "Examples"
    echo
    echo "git review -o topic=bugfix master"
-   echo "git review -o \"m=#AS\" -o \"l=Code-Review+2\""
+   echo "git review -o \"m=#AS\" -o \"l=Code-Review+2\" -o \"t=stable-bugfix\""
 }
 
 while getopts "o:h" OPTION; do
