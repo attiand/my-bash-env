@@ -130,4 +130,4 @@ for bcfile in ~/.bash_completion.d/* ; do
     source $bcfile
 done
 
-
+unsetopt share_history
