@@ -1,4 +1,5 @@
 --ignore-dir=target
+--ignore-dir=.idea
 --type-set=maven:is:pom.xml
 --type-set=npm:is:package.json
 --type-set=property:ext:properties
@@ -6,8 +7,7 @@
 --type-add=jenkins:is:job_dsl.groovy
 --type-set=gradle:is:build.gradle
 --type-add=gradle:is:settings.gradle
---type-set=docker:is:Dockerfile
---type-add=docker:is:Containerfile
+--type-set=docker:match:/^(?:Containerfile|Dockerfile.*)$/
 --type-set=fitnesse:is:content.txt
 --type-set=buildimages:is:common.groovy
 --type-set=jboss:is:jboss-deployment-structure.xml
