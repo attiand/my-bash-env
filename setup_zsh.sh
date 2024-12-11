@@ -113,6 +113,7 @@ source $BASEDIR/etc/zsh/shell_setup.sh
 export PATH=$BASEDIR/bin:$PATH
 export ACKRC=$BASEDIR/etc/ackrc
 export BAT_CONFIG_PATH=$BASEDIR/etc/batrc
+export RIPGREP_CONFIG_PATH=$BASEDIR/etc/ripgreprc
 
 if [ ! -f /run/.toolboxenv ]; then
 PROMPT='$(kube_ps1)'$PROMPT
