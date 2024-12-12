@@ -30,6 +30,6 @@ renovate:renovate.json
 --type-add
 renovate:renovate.json5
 
-
-
-
+--colors=match:bg:yellow
+--colors=match:fg:black
+--colors=match:style:nobold
