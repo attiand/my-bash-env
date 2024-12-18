@@ -1,7 +1,4 @@
 --type-add
-web:*.{html,css,js}*
-
---type-add
 maven:pom.xml
 
 --type-add
@@ -13,14 +10,7 @@ jenkins:Jenkinsfile
 jenkins:job_dsl.groovy
 
 --type-add
-gradle:build.gradle
---type-add
-gradle:settings.gradle
-
---type-add
 docker:Containerfile*
---type-add
-docker:Dockerfile*
 
 --type-add
 fitnesse:content.txt
